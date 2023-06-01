@@ -39,13 +39,14 @@ void setup() {
       int Light = analogRead(A0);
       Serial.println(Light);
       if(Light >= 1500){
-      Serial.println("불이 꺼졌습니다.");
+        int a = 1;
       }
       delay(100);       // 1초 대기
     }
-    else if(param1 == "OFF"){
+    if(param1 == "OFF"){
       noTone(BUZZER_PIN); // 소리 중지
-      // delay(1000); // 1초 동안 대기
+      Serial.println("OFFOFFOFF");
+      delay(1000); // 1초 동안 대기
     }
   });
 
